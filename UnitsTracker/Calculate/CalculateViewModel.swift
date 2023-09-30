@@ -11,7 +11,11 @@ class CalculateViewModel: ObservableObject {
     
     @Published var calculatedUnits: String = ""
     
-    private let calculator = UnitsCalculator()
+    private let calculator: UnitsCalculating
+    
+    init(calculator: UnitsCalculating) {
+        self.calculator = calculator
+    }
     
     func calculatePressed(ounces: String, proof: String) {
         guard let ounces = Double(ounces) else {

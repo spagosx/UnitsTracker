@@ -12,7 +12,6 @@ class DrinksListCoordinator: ObservableObject {
     @Published var viewModel: DrinksListViewModel!
     
     init(drinksStore: DrinksStore) {
-        self.viewModel = DrinksListViewModel(drinksStore: drinksStore,
-                                             coordinator: self)
+        self.viewModel = DrinksListViewModel(drinksStore: drinksStore)
     }
 }

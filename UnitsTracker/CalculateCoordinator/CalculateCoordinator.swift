@@ -12,6 +12,6 @@ class CalculateCoordinator: ObservableObject {
     @Published var viewModel: CalculateViewModel
     
     init() {
-        self.viewModel = CalculateViewModel()
+        self.viewModel = CalculateViewModel(calculator: UnitsCalculator())
     }
 }

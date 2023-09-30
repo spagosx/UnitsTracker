@@ -7,9 +7,13 @@
 
 import Foundation
 
+protocol UnitsCalculating {
+    func unitsFrom(floz: Double, proof: Double) -> Double
+}
+
 let floz_to_ml_factor = 29.57353
 
-struct UnitsCalculator {
+struct UnitsCalculator: UnitsCalculating {
 
     func unitsFrom(floz: Double, proof: Double) -> Double {
         // convert floz into ml

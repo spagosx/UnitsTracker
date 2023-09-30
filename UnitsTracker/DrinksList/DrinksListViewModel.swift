@@ -12,16 +12,10 @@ class DrinksListViewModel: ObservableObject {
     
     @Published var drinks = [DrinkViewModel]()
     
-    private let drinksStore: DrinksStore
-    private unowned let coordinator: DrinksListCoordinator
     private var drinksSubscription: AnyCancellable?
     
-    init(drinksStore: DrinksStore,
-         coordinator: DrinksListCoordinator) {
-        self.drinksStore = drinksStore
-        self.coordinator = coordinator
-        
-        drinksSubscription = drinksStore.drinks
+    init(drinksStore: DrinksStore) {
+        drinksSubscription = drinksStore.storedObjects
             .map { drinks -> [DrinkViewModel] in
                 drinks.map { drink in
                     DrinkViewModel(drink: drink)

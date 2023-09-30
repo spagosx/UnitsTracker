@@ -8,7 +8,7 @@
 import Foundation
 
 class DrinkViewModel: Identifiable {
-    let drink: Drink
+    private let drink: Drink
     
     init(drink: Drink) {
         self.drink = drink
@@ -18,6 +18,7 @@ class DrinkViewModel: Identifiable {
         let formatter = DateFormatter()
         formatter.timeZone = .current
         formatter.dateStyle = .short
+        formatter.dateFormat = "MM/dd/yyyy"
         formatter.timeStyle = .none
         return formatter.string(from: drink.date)
     }()

@@ -22,8 +22,8 @@ extension Date {
     }
 }
 
-class DrinksStore {
-    let drinks = CurrentValueSubject<[Drink], Never>(mockDrinks)
+class DrinksStore: LocalStoring {
+    let storedObjects = CurrentValueSubject<[Drink], Never>(mockDrinks)
     
     private static let mockDrinks: [Drink] = {
         Date().lastSevenDays().map {
@@ -39,7 +39,11 @@ class DrinksStore {
         .appendingPathComponent("drinks.data")
     }
     
-//    func load() async throws {
+    func add(drink: Drink) {
+        self.storedObjects.value.append(drink)
+    }
+    
+    func load() {
 ////        let task = Task<[Drink], Error> {
 ////            let fileURL = try Self.fileURL()
 ////            guard let data = try? Data(contentsOf: fileURL) else {
@@ -49,9 +53,9 @@ class DrinksStore {
 ////            return drinks
 ////        }
 ////        let drinks = try await task.value
-//    }
+    }
     
-    func save(drinks: [Drink]) async throws {
+    func save(objects: [Drink]) {
 //        let task = Task {
 //            let data = try JSONEncoder().encode(drinks)
 //            let outfile = try Self.fileURL()
