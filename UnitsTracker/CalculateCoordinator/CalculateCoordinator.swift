@@ -9,4 +9,9 @@ import SwiftUI
 
 class CalculateCoordinator: ObservableObject {
     
+    @Published var viewModel: CalculateViewModel
+    
+    init() {
+        self.viewModel = CalculateViewModel()
+    }
 }

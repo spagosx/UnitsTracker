@@ -12,6 +12,6 @@ struct CalculateCoordinatorView: View {
     @ObservedObject var coordinator: CalculateCoordinator
     
     var body: some View {
-        Text("calculate")
+        CalculateView(viewModel: coordinator.viewModel)
     }
 }
