@@ -10,7 +10,7 @@ import Combine
 
 class DrinksListViewModel: ObservableObject {
     
-    @Published var drinks = [Drink]()
+    @Published var drinks = [DrinkViewModel]()
     
     private let drinksStore: DrinksStore
     private unowned let coordinator: DrinksListCoordinator
@@ -21,6 +21,12 @@ class DrinksListViewModel: ObservableObject {
         self.drinksStore = drinksStore
         self.coordinator = coordinator
         
-        drinksSubscription = drinksStore.drinks.assign(to: \.drinks, on: self)
+        drinksSubscription = drinksStore.drinks
+            .map { drinks -> [DrinkViewModel] in
+                drinks.map { drink in
+                    DrinkViewModel(drink: drink)
+                }
+            }
+            .assign(to: \.drinks, on: self)
     }
 }

@@ -21,7 +21,7 @@ struct TabCoordinatorView: View {
                 }
                 .tag(Tab.calculate)
             
-            DrinksListCoordinatorView(coordinator: coordinator.trackCoordinator)
+            DrinksListCoordinatorView(coordinator: coordinator.drinksListCoordinator)
                 .tabItem {
                     Label("Track", systemImage: "chart.bar.doc.horizontal")
                 }

@@ -9,10 +9,8 @@ import SwiftUI
 
 @main
 struct UnitsTrackerApp: App {
-
-//    @StateObject private var store = DrinksStore()
     
-    @StateObject private var coordinator = TabCoordinator()
+    @StateObject private var coordinator = TabCoordinator(drinksStore: DrinksStore())
 
     var body: some Scene {
         WindowGroup {

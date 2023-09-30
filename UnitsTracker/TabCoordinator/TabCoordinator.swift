@@ -14,6 +14,11 @@ enum Tab {
 
 class TabCoordinator: ObservableObject {
     @Published var tab = Tab.calculate
-    @Published var calculateCoordinator = CalculateCoordinator()
-    @Published var trackCoordinator = DrinksListCoordinator(drinksStore: DrinksStore())
+    var calculateCoordinator: CalculateCoordinator!
+    var drinksListCoordinator: DrinksListCoordinator!
+    
+    init(drinksStore: DrinksStore) {
+        self.calculateCoordinator = CalculateCoordinator()
+        self.drinksListCoordinator = DrinksListCoordinator(drinksStore: drinksStore)
+    }
 }

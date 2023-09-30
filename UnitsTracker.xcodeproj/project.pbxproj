@@ -16,6 +16,8 @@
 		921157F72AC83D1B0076D465 /* DrinksListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921157F62AC83D1B0076D465 /* DrinksListViewModel.swift */; };
 		921157F92AC83D210076D465 /* DrinksListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921157F82AC83D210076D465 /* DrinksListView.swift */; };
 		921157FC2AC843840076D465 /* Drink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921157FB2AC843840076D465 /* Drink.swift */; };
+		921157FE2AC864C60076D465 /* DrinkViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921157FD2AC864C60076D465 /* DrinkViewModel.swift */; };
+		921158012AC867BA0076D465 /* Identifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921158002AC867BA0076D465 /* Identifiable.swift */; };
 		92A893D42A66EA300014AB8E /* UnitsTrackerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A893D32A66EA300014AB8E /* UnitsTrackerApp.swift */; };
 		92A893D82A66EA310014AB8E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 92A893D72A66EA310014AB8E /* Assets.xcassets */; };
 		92A893DB2A66EA310014AB8E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 92A893DA2A66EA310014AB8E /* Preview Assets.xcassets */; };
@@ -54,6 +56,8 @@
 		921157F62AC83D1B0076D465 /* DrinksListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinksListViewModel.swift; sourceTree = "<group>"; };
 		921157F82AC83D210076D465 /* DrinksListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinksListView.swift; sourceTree = "<group>"; };
 		921157FB2AC843840076D465 /* Drink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Drink.swift; sourceTree = "<group>"; };
+		921157FD2AC864C60076D465 /* DrinkViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkViewModel.swift; sourceTree = "<group>"; };
+		921158002AC867BA0076D465 /* Identifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Identifiable.swift; sourceTree = "<group>"; };
 		92A893D02A66EA300014AB8E /* UnitsTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UnitsTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		92A893D32A66EA300014AB8E /* UnitsTrackerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitsTrackerApp.swift; sourceTree = "<group>"; };
 		92A893D72A66EA310014AB8E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -125,6 +129,7 @@
 			children = (
 				921157F62AC83D1B0076D465 /* DrinksListViewModel.swift */,
 				921157F82AC83D210076D465 /* DrinksListView.swift */,
+				921157FD2AC864C60076D465 /* DrinkViewModel.swift */,
 			);
 			path = DrinksList;
 			sourceTree = "<group>";
@@ -136,6 +141,15 @@
 				921157FB2AC843840076D465 /* Drink.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		921157FF2AC867AA0076D465 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				92A893FF2A66EA780014AB8E /* Calculator.swift */,
+				921158002AC867BA0076D465 /* Identifiable.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		92A893C72A66EA300014AB8E = {
@@ -166,7 +180,7 @@
 				921157EE2AC8365F0076D465 /* CalculateCoordinator */,
 				921157F02AC8367D0076D465 /* TrackCoordinator */,
 				921157F52AC83D020076D465 /* DrinksList */,
-				92A893FF2A66EA780014AB8E /* Calculator.swift */,
+				921157FF2AC867AA0076D465 /* Utils */,
 				921157FA2AC8436E0076D465 /* Model */,
 				92A893D72A66EA310014AB8E /* Assets.xcassets */,
 				92A893D92A66EA310014AB8E /* Preview Content */,
@@ -341,6 +355,8 @@
 				921157E62AC835A00076D465 /* TabCoordinator.swift in Sources */,
 				92A894042A6713B30014AB8E /* DrinksStore.swift in Sources */,
 				921157FC2AC843840076D465 /* Drink.swift in Sources */,
+				921158012AC867BA0076D465 /* Identifiable.swift in Sources */,
+				921157FE2AC864C60076D465 /* DrinkViewModel.swift in Sources */,
 				921157EA2AC836310076D465 /* CalculateCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

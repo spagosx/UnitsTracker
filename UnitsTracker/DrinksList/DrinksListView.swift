@@ -13,7 +13,7 @@ struct DrinksListView: View {
     
     var body: some View {
         List(viewModel.drinks) { drink in
-            Text("\(drink.floz), \(drink.proof), \(drink.units), \(drink.date)")
+            Text("\(drink.quantity), \(drink.proof), \(drink.units), \(drink.date)")
         }
     }
 }

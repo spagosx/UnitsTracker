@@ -7,8 +7,7 @@
 
 import Foundation
 
-struct Drink: Identifiable, Codable {
-    var id = UUID()
+struct Drink: Codable {
     let floz: Double
     let proof: Double
     let units: Double
